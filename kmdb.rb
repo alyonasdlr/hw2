@@ -70,6 +70,8 @@
 # Use `Model.destroy_all` code.
 # TODO!
 Person.destroy_all
+Movie.destroy_all
+Cast.destroy_all
 # Generate models and tables, according to the domain model
 # TODO!
 bale = Person.new
@@ -126,6 +128,11 @@ hathaway = Person.new
 hathaway.name = "Anne"
 hathaway.surname = "Hathaway"
 hathaway.save
+
+nolan = Person.new
+nolan.name = "Christopher"
+nolan.surname = "Nolan"
+nolan.save
 
 puts "there are now #{Person.all.count} people"   
 
