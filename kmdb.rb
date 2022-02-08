@@ -134,11 +134,50 @@ nolan.name = "Christopher"
 nolan.surname = "Nolan"
 nolan.save
 
+batman_begins = Movie.new
+batman_begins.name = "Batman Begins"
+batman_begins.year = "2005"
+batman_begins.rating = "PG-13"
+batman_begins.director = nolan_id
+batman_begins.save
+
+the_dark_knight = Movie.new
+the_dark_knight.name = "The Dark Knight"
+the_dark_knight.year = "2008"
+the_dark_knight.rating = "PG-13"
+the_dark_knight.director = nolan)id
+the_dark_knight.save
+
+the_dark_knight_rises = Movie.new
+the_dark_knight_rises.name = "The Dark Knight Rises"
+the_dark_knight_rises.year = "2012"
+the_dark_knight_rises.rating = "PG-13"
+the_dark_knight_rises.director = nolan_id
+the_dark_knight_rises.save
+
+
+director = Person.where({ surname: "Nolan"})[0]
+nolan_id = director.id
+
+for person in director.people
+    
+        puts "#{person.first_name} #{person.last_name}"
+    end   
+
 puts "there are now #{Person.all.count} people"   
+
+
+
+
+all_movies = Movie.all
+for movie in all_movies
+   puts "#{movie.name}"
+end  
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
 # TODO!
+puts the_dark_knight_rises.inspect
 
 # Prints a header for the movies output
 puts "Movies"
