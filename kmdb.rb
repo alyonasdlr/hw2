@@ -69,9 +69,65 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
-Model.destroy_all
+Person.destroy_all
 # Generate models and tables, according to the domain model
 # TODO!
+bale = Person.new
+bale.name = "Christian"
+bale.surname = "Bale"
+bale.save
+
+caine = Person.new
+caine.name = "Michael"
+caine.surname = "Caine"
+caine.save
+
+neeson = Person.new
+neeson.name = "Liam"
+neeson.surname = "Neeson"
+neeson.save
+
+holmes = Person.new
+holmes.name = "Katie"
+holmes.surname = "Holmes"
+holmes.save
+
+oldman = Person.new
+oldman.name = "Gary"
+oldman.surname = "Oldman"
+oldman.save
+
+ledger = Person.new
+ledger.name = "Heath"
+ledger.surname = "Ledger"
+ledger.save
+
+eckhart = Person.new
+eckhart.name = "Aaron"
+eckhart.surname = "Eckhart"
+eckhart.save
+
+gyllenhaal = Person.new
+gyllenhaal.name = "Maggie"
+gyllenhaal.surname = "Gyllenhaal"
+gyllenhaal.save
+
+hardy = Person.new
+hardy.name = "Tom"
+hardy.surname = "Hardy"
+hardy.save
+
+gordon = Person.new
+gordon.name = "Joseph"
+gordon.surname = "Gordon-Lewitt"
+gordon.save
+
+hathaway = Person.new
+hathaway.name = "Anne"
+hathaway.surname = "Hathaway"
+hathaway.save
+
+puts "there are now #{Person.all.count} people"   
 
 # Insert data into your database that reflects the sample data shown above
 # Do not use hard-coded foreign key IDs.
